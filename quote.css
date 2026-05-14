@@ -1,0 +1,354 @@
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Standard document font */
+}
+
+body {
+    background-color: #f0f2f5;
+    padding: 40px 20px;
+    color: #333;
+}
+
+input, select {
+    font-family: inherit;
+    font-size: 14px;
+    border: 1px solid transparent;
+    padding: 4px;
+    width: 100%;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+input:hover, select:hover,
+input:focus, select:focus {
+    border-color: #ccc;
+    background: #fafafa;
+    outline: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Toolbar */
+.toolbar {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.back-btn {
+    text-decoration: none;
+    color: #ffaa00;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 6px;
+    background: white;
+    border: 1px solid #ddd;
+}
+
+.download-btn, .add-btn {
+    background: #ffaa00;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.download-btn:hover, .add-btn:hover {
+    background: #ffd700;
+}
+
+/* Document Container */
+.document-container {
+    background: white;
+    max-width: 800px; /* A4 rough width */
+    margin: 0 auto;
+    padding: 40px 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: 1px solid #ddd;
+}
+
+/* Header */
+.doc-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.quote-logo {
+    height: 50px;
+}
+
+.logo-container h2 {
+    color: #111;
+    font-size: 22px;
+}
+
+.contact-details p {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.doc-title-info {
+    text-align: right;
+}
+
+.doc-title {
+    color: #ffaa00;
+    font-size: 36px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.meta-table {
+    border-collapse: collapse;
+    width: 250px;
+    margin-left: auto;
+}
+
+.meta-table th, .meta-table td {
+    border: 1px solid #000;
+    padding: 4px 8px;
+    font-size: 13px;
+    text-align: left;
+}
+
+.meta-table th {
+    background: transparent;
+    font-weight: normal;
+    text-align: right;
+    border: none;
+    padding-right: 15px;
+}
+
+.meta-table td {
+    border: 1px solid #333;
+}
+
+.meta-table input {
+    text-align: center;
+    padding: 2px;
+}
+
+/* Customer Section */
+.section-title-bar {
+    background: #000;
+    color: #ffd700;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.customer-section {
+    width: 350px;
+    margin-bottom: 20px;
+}
+
+.customer-inputs input {
+    display: block;
+    margin-bottom: 2px;
+}
+
+/* Table */
+.quote-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+.quote-table th {
+    background: #000;
+    color: #ffd700;
+    padding: 6px 10px;
+    font-size: 13px;
+    text-align: left;
+}
+
+.quote-table td {
+    border: 1px solid #ccc;
+    padding: 0;
+}
+
+.quote-table input, .quote-table select {
+    padding: 8px 10px;
+}
+
+.col-desc { width: 45%; }
+.col-price { width: 20%; text-align: right; }
+.col-qty { width: 10%; text-align: center; }
+.col-amount { width: 20%; text-align: right; }
+.col-action { width: 5%; text-align: center; border: none !important; background: white;}
+
+.amount {
+    padding: 8px 10px !important;
+    text-align: right;
+}
+
+.unit-price, .qty {
+    text-align: right;
+}
+
+.remove-row-btn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.remove-row-btn:hover {
+    background: #c0392b;
+}
+
+.add-row-container {
+    margin-bottom: 30px;
+}
+
+/* Bottom Section */
+.bottom-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.terms-section {
+    width: 55%;
+}
+
+.terms-content {
+    font-size: 12px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    min-height: 150px;
+}
+
+.terms-content p {
+    margin-bottom: 5px;
+}
+
+.signature-area {
+    margin-top: 30px;
+}
+
+.signature-line {
+    border-bottom: 1px solid #000;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    width: 80%;
+}
+
+.totals-section {
+    width: 40%;
+}
+
+.totals-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.totals-table th, .totals-table td {
+    padding: 5px 8px;
+    font-size: 14px;
+}
+
+.totals-table th {
+    text-align: right;
+    font-weight: normal;
+}
+
+.totals-table td:nth-child(2) {
+    width: 20px;
+    text-align: center;
+}
+
+.totals-table td:last-child {
+    text-align: right;
+    border: 1px solid #ccc;
+    min-width: 100px;
+}
+
+.grand-total-row th {
+    font-weight: bold;
+}
+
+.grand-total-row td {
+    background: #fff3b0;
+    font-weight: bold;
+}
+
+/* Footer Note */
+.footer-note {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.thank-you {
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* Print / PDF Styles */
+body.exporting-pdf .no-print {
+    display: none !important;
+}
+
+body.exporting-pdf input, 
+body.exporting-pdf select {
+    border-color: transparent !important;
+    background: transparent !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+    
+    .document-container {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+    }
+    
+    .no-print {
+        display: none !important;
+    }
+
+    input, select {
+        border-color: transparent !important;
+        background: transparent !important;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+    
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+}

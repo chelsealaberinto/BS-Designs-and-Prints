@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Quote | BS Designs and Prints</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="quote.css">
+    <link rel="icon" type="image/png" href="assets/logo2.png">
+    <!-- html2pdf.js for PDF export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div class="toolbar no-print">
+        <a href="index.html" class="back-btn">&larr; Back to Home</a>
+        <button id="downloadPdfBtn" class="download-btn">Download PDF</button>
+    </div>
+
+    <div class="document-container" id="quoteDocument">
+        <div class="doc-header">
+            <div class="company-info">
+                <div class="logo-container">
+                    <img src="assets/logo.png" alt="BS Logo" class="quote-logo">
+                    <h2>BS DESIGNS AND PRINTS</h2>
+                </div>
+                <div class="contact-details">
+                    <p>Mobile: 0999 777 1517</p>
+                    <p>Landline: (043) 723 2575</p>
+                    <p>Email: stinger3469@gmail.com</p>
+                    <p>Messenger: BS Designs And Prints</p>
+                </div>
+            </div>
+            <div class="doc-title-info">
+                <h1 class="doc-title">QUOTE</h1>
+                <table class="meta-table">
+                    <tr>
+                        <th>DATE</th>
+                        <td><input type="date" id="quoteDate"></td>
+                    </tr>
+                    <tr>
+                        <th>QUOTE #</th>
+                        <td><input type="text" id="quoteNumber" placeholder="[123456]"></td>
+                    </tr>
+                    <tr>
+                        <th>CUSTOMER ID</th>
+                        <td><input type="text" id="customerId" placeholder="[123]"></td>
+                    </tr>
+                    <tr>
+                        <th>VALID UNTIL</th>
+                        <td><input type="date" id="validUntil"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="customer-section">
+            <div class="section-title-bar">CUSTOMER</div>
+            <div class="customer-inputs">
+                <input type="text" placeholder="[Name]" id="custName">
+                <input type="text" placeholder="[Company Name]" id="custCompany">
+                <input type="text" placeholder="[Street Address]" id="custAddress">
+                <input type="text" placeholder="[City, ST  ZIP]" id="custCityZip">
+                <input type="text" placeholder="[Phone]" id="custPhone">
+            </div>
+        </div>
+
+        <table class="quote-table">
+            <thead>
+                <tr>
+                    <th class="col-desc">DESCRIPTION</th>
+                    <th class="col-price">UNIT PRICE</th>
+                    <th class="col-qty">QTY</th>
+                    <th class="col-amount">AMOUNT</th>
+                    <th class="col-action no-print"></th>
+                </tr>
+            </thead>
+            <tbody id="quoteItems">
+                <!-- Initial Row -->
+                <tr class="item-row">
+                    <td>
+                        <select class="product-select">
+                            <option value="" disabled selected>Select a Product...</option>
+                            <optgroup label="Business Cards">
+                                <option value="15.00">Standard Cards (100 pcs) - $15.00</option>
+                                <option value="30.00">Premium Cards (250 pcs) - $30.00</option>
+                                <option value="45.00">Foil Stamped (100 pcs) - $45.00</option>
+                            </optgroup>
+                            <optgroup label="Apparel">
+                                <option value="12.00">Basic Cotton T-Shirt - $12.00/ea</option>
+                                <option value="35.00">Premium Blend Hoodie - $35.00/ea</option>
+                                <option value="25.00">Embroidered Polo - $25.00/ea</option>
+                            </optgroup>
+                            <optgroup label="Marketing Materials">
+                                <option value="40.00">A5 Flyers (500 pcs) - $40.00</option>
+                                <option value="65.00">Tri-fold Brochures (250 pcs) - $65.00</option>
+                                <option value="35.00">A3 Posters (50 pcs) - $35.00</option>
+                            </optgroup>
+                            <optgroup label="Merchandise">
+                                <option value="8.00">Ceramic Mug (11oz) - $8.00/ea</option>
+                                <option value="20.00">Die-Cut Stickers (100 pcs) - $20.00</option>
+                                <option value="10.00">Canvas Tote Bag - $10.00/ea</option>
+                            </optgroup>
+                            <option value="custom">Custom Item...</option>
+                        </select>
+                        <input type="text" class="custom-desc hidden" placeholder="Enter custom description">
+                    </td>
+                    <td><input type="number" step="0.01" class="unit-price" placeholder="0.00"></td>
+                    <td><input type="number" class="qty" placeholder="1" min="1"></td>
+                    <td class="amount">0.00</td>
+                    <td class="col-action no-print"><button class="remove-row-btn">&times;</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="add-row-container no-print">
+            <button id="addRowBtn" class="add-btn">+ Add Item</button>
+        </div>
+
+        <div class="bottom-section">
+            <div class="terms-section">
+                <div class="section-title-bar">TERMS AND CONDITIONS</div>
+                <div class="terms-content">
+                    <p>1. Customer will be billed after indicating acceptance of this quote.</p>
+                    <p>2. Payment will be due prior to delivery of service and goods.</p>
+                    <p>3. Please sign and return this quote to proceed with the order.</p>
+                    
+                    <div class="signature-area">
+                        <p>Customer Acceptance (sign below):</p>
+                        <div class="signature-line"></div>
+                        <p>Print Name: _______________________</p>
+                    </div>
+                </div>
+            </div>
+            <div class="totals-section">
+                <table class="totals-table">
+                    <tr>
+                        <th>Subtotal</th>
+                        <td>$</td>
+                        <td id="subtotal">0.00</td>
+                    </tr>
+                    <tr>
+                        <th>Tax Rate (%)</th>
+                        <td></td>
+                        <td><input type="number" id="taxRate" value="0.00" step="0.1" style="width: 60px; text-align: right;"></td>
+                    </tr>
+                    <tr>
+                        <th>Tax Due</th>
+                        <td>$</td>
+                        <td id="taxDue">0.00</td>
+                    </tr>
+                    <tr class="grand-total-row">
+                        <th>TOTAL</th>
+                        <td>$</td>
+                        <td id="grandTotal">0.00</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            <p>If you have any questions about this price quote, please contact</p>
+            <p><strong>stinger3469@gmail.com, 0999 777 1517</strong></p>
+            <p class="thank-you">Thank You For Your Business!</p>
+        </div>
+    </div>
+
+    <script src="quote.js"></script>
+</body>
+</html>

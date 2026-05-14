@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BS DESIGNS AND PRINTS | Turn your ideas into Print</title>
+    <meta name="description" content="High-quality custom printing for business cards, apparel, flyers, and more.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/logo2.png">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="assets/logo2.png" alt="BS Logo" class="logo-img">
+            BS Designs and Prints
+        </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#showcase">Showcase</a>
+            <a href="#pricing">Pricing</a>
+        </nav>
+        <div class="nav-actions" style="display: flex; gap: 15px; align-items: center;">
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">☀️</button>
+            <a href="quote.html" class="cta-btn" style="text-decoration: none;">Get a Quote</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Turn your ideas into<span class="text-gradient"> Print</span></h1>
+                <p>Premium printing solutions for your business and personal needs. From elegant business cards to
+                    custom apparel.</p>
+                <a href="#showcase" class="explore-btn">Explore Products</a>
+            </div>
+            <div class="hero-images">
+                <div class="image-grid">
+                    <img src="assets/bagtags.png" alt="Bag Tags" class="floating-img img-1">
+                    <img src="assets/sintra.png" alt="Sintra Board" class="floating-img img-2">
+                    <img src="assets/mug.png" alt="Mugs" class="floating-img img-3">
+                    <img src="assets/tumblers.png" alt="Tumbler" class="floating-img img-4">
+                </div>
+            </div>
+        </section>
+
+        <!-- Promo Banner Section -->
+        <section class="promo-banner-section">
+            <img src="assets/package.png" alt="ID Package Promotion" class="promo-img">
+        </section>
+
+        <!-- Showcase & Pricing Gallery -->
+        <section id="showcase" class="showcase-section">
+            <h2 class="section-title">Product <span class="text-gradient">Showcase</span></h2>
+
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="cards">Umbrella</button>
+                <button class="filter-btn" data-filter="apparel">Apparel</button>
+                <button class="filter-btn" data-filter="mugs">Mugs</button>
+                <button class="filter-btn" data-filter="stickers">Stickers</button>
+                <button class="filter-btn" data-filter="calendar">Calendar</button>
+                <button class="filter-btn" data-filter="keychain">Keychain</button>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Card 1 -->
+                <div class="gallery-item glass" data-category="cards">
+                    <div class="gallery-img-wrapper">
+                        <img src="assets/1.png" alt="Umbrellas">
+                    </div>
+                    <div class="gallery-content">
+                        <h3>Custom Printed Umbrella</h3>
+                        <p>Stay protected in style with our personalized umbrellas. Perfect for events, giveaways, or
+                            daily use, durable, eye-catching, and uniquely yours.</p>
+                        <div class="price-tag">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="gallery-item glass" data-category="apparel">
+                    <div class="gallery-img-wrapper">
+                        <img src="assets/2.png" alt="Custom T-Shirts">
+                    </div>
+                    <div class="gallery-content">
+                        <h3>Custom Printed Shirts</h3>
+                        <p>Express your brand or personality with high-quality customized shirts. Ideal for businesses,
+                            teams, and special occasions.</p>
+                        <div class="price-tag">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="gallery-item glass" data-category="mugs">
+                    <div class="gallery-img-wrapper">
+                        <img src="assets/4.png" alt="Mugs">
+                    </div>
+                    <div class="gallery-content">
+                        <h3>Personalized Printed Mugs</h3>
+                        <p>Make every sip special with our custom mugs. Great for gifts, souvenirs, or promotional items
+                            with your own design.</p>
+                        <div class="price-tag">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="gallery-item glass" data-category="merch">
+                    <div class="gallery-img-wrapper">
+                        <img src="assets/4.png" alt="Custom Mugs">
+                    </div>
+                    <div class="gallery-content">
+                        <h3>Custom Printed Stickers</h3>
+                        <p>High-quality, vibrant stickers perfect for branding, packaging, or personal use. Waterproof
+                            and long-lasting.</p>
+                        <div class="price-tag">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item glass" data-category="marketing">
+                    <div class="gallery-img-wrapper">
+                        <img src="assets/3.png" alt="Calendar">
+                    </div>
+                    <div class="gallery-content">
+                        <h3>Personalized Calendar Prints</h3>
+                        <p>Stay organized with custom-designed calendars featuring your photos, brand, or preferred
+                            layout—perfect for home or office use.</p>
+                        <div class="price-tag">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item glass" data-category="keychain">
+                    <div class="gallery-img-wrapper">
+                        <img src="assets/5.png" alt="keychains">
+                    </div>
+                    <div class="gallery-content">
+                        <h3>Custom Printed Keychains</h3>
+                        <p>Carry your memories or brand everywhere with stylish and durable personalized
+                            keychains—perfect as giveaways or souvenirs.</p>
+                        <div class="price-tag">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 | BS DESIGNS AND PRINTS. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
