@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             galleryItems.forEach(item => {
                 const category = item.getAttribute('data-category');
-                
+
                 // If "all" is selected or category matches, show it
                 if (filterValue === 'all' || filterValue === category) {
                     item.classList.remove('hide');
@@ -86,3 +86,57 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Generic Modal Logic
+window.openModal = function (modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+    }
+};
+
+window.closeModal = function (modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.remove('show');
+        document.body.style.overflow = 'auto';
+    }
+};
+
+window.switchTab = function (tabId, btn, modalId) {
+    const modal = document.getElementById(modalId);
+    if (!modal) return;
+
+    // Remove active class from buttons in this modal
+    const btns = modal.querySelectorAll('.modal-tab-btn');
+    btns.forEach(b => b.classList.remove('active'));
+    // Add active class to clicked button
+    btn.classList.add('active');
+
+    // Hide all tab contents in this modal
+    const contents = modal.querySelectorAll('.modal-tab-content');
+    contents.forEach(c => c.classList.remove('active'));
+    // Show clicked tab content
+    const activeTab = modal.querySelector('#' + tabId);
+    if (activeTab) {
+        activeTab.classList.add('active');
+    }
+};
+
+// Close modal if clicking outside of the content
+window.addEventListener('click', (e) => {
+    if (e.target.classList.contains('modal')) {
+        e.target.classList.remove('show');
+        document.body.style.overflow = 'auto';
+    }
+});
+
+// Scroll filter buttons horizontally
+window.scrollFilters = function(direction) {
+    const container = document.getElementById('filterContainer');
+    if (container) {
+        const scrollAmount = 250; // Adjust scroll distance as needed
+        container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+    }
+};

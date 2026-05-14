@@ -264,7 +264,7 @@ nav a:hover {
     max-width: 100%;
     height: auto;
     border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
 }
 
@@ -285,25 +285,76 @@ nav a:hover {
     margin-bottom: 4rem;
 }
 
+.filter-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 100%;
+    margin-bottom: 3rem;
+    padding: 0 50px; /* Space for arrows */
+}
+
 .filter-container {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
     gap: 1rem;
-    margin-bottom: 3rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    padding: 10px 5px; /* Prevent box-shadow cropping */
+    white-space: nowrap;
+    width: 100%;
+}
+
+.filter-container::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-arrow {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    transition: all 0.3s;
+}
+
+.scroll-arrow:hover {
+    background: rgba(255, 215, 0, 0.2);
+    color: #ffd700;
+}
+
+.left-arrow {
+    left: 0;
+}
+
+.right-arrow {
+    right: 0;
 }
 
 .filter-btn {
+    flex-shrink: 0;
     padding: 0.75rem 1.5rem;
     border: 1px solid rgba(255, 215, 0, 0.2);
     background: var(--glass-bg);
     color: var(--text-secondary);
     border-radius: 50px;
-    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(10px);
 }
 
 .filter-btn:hover,
@@ -438,5 +489,132 @@ footer {
 
     nav {
         display: none;
+    }
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 2.5rem;
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: var(--text-secondary);
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: var(--text-primary);
+}
+
+.modal-tabs {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+    padding-bottom: 10px;
+}
+
+.modal-tab-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s;
+}
+
+.modal-tab-btn.active,
+.modal-tab-btn:hover {
+    color: #ffd700;
+    border-bottom: 2px solid #ffd700;
+}
+
+.modal-tab-content {
+    display: none;
+    animation: fadeIn 0.4s ease forwards;
+}
+
+.modal-tab-content.active {
+    display: flex;
+    gap: 30px;
+}
+
+.modal-tab-content img {
+    width: 300px;
+    height: 300px;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.modal-tab-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal-tab-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.modal-tab-text p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .modal-tab-content.active {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal-tab-content img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .modal-tab-text {
+        text-align: center;
     }
 }

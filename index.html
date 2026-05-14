@@ -54,28 +54,19 @@
 
         <!-- Showcase & Pricing Gallery -->
         <section id="showcase" class="showcase-section">
-            <h2 class="section-title">Product <span class="text-gradient">Showcase</span></h2>
-
-            <div class="filter-container">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="cards">Umbrella</button>
-                <button class="filter-btn" data-filter="apparel">Apparel</button>
-                <button class="filter-btn" data-filter="mugs">Mugs</button>
-                <button class="filter-btn" data-filter="stickers">Stickers</button>
-                <button class="filter-btn" data-filter="calendar">Calendar</button>
-                <button class="filter-btn" data-filter="keychain">Keychain</button>
-            </div>
+            <h2 class="section-title">Services <span class="text-gradient">Offered</span></h2>
 
             <div class="gallery-grid">
                 <!-- Card 1 -->
-                <div class="gallery-item glass" data-category="cards">
+                <div class="gallery-item glass" data-category="umbrella" style="cursor: pointer;"
+                    onclick="openModal('umbrellaModal')">
                     <div class="gallery-img-wrapper">
                         <img src="assets/1.png" alt="Umbrellas">
                     </div>
                     <div class="gallery-content">
                         <h3>Custom Printed Umbrella</h3>
                         <p>Stay protected in style with our personalized umbrellas. Perfect for events, giveaways, or
-                            daily use, durable, eye-catching, and uniquely yours.</p>
+                            daily use. <span class="text-gradient">Click to view all options.</span></p>
                         <div class="price-tag">
                             <span class="price-label">Starting at</span>
                             <span class="price-value">₱ 0.00</span>
@@ -84,14 +75,16 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div class="gallery-item glass" data-category="apparel">
+                <div class="gallery-item glass" data-category="shirts" style="cursor: pointer;"
+                    onclick="openModal('shirtsModal')">
                     <div class="gallery-img-wrapper">
                         <img src="assets/2.png" alt="Custom T-Shirts">
                     </div>
                     <div class="gallery-content">
                         <h3>Custom Printed Shirts</h3>
                         <p>Express your brand or personality with high-quality customized shirts. Ideal for businesses,
-                            teams, and special occasions.</p>
+                            teams, and special occasions. <span class="text-gradient">Click to view all options.</span>
+                        </p>
                         <div class="price-tag">
                             <span class="price-label">Starting at</span>
                             <span class="price-value">₱ 0.00</span>
@@ -100,14 +93,15 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div class="gallery-item glass" data-category="mugs">
+                <div class="gallery-item glass" data-category="mugs" style="cursor: pointer;"
+                    onclick="openModal('mugsModal')">
                     <div class="gallery-img-wrapper">
                         <img src="assets/4.png" alt="Mugs">
                     </div>
                     <div class="gallery-content">
                         <h3>Personalized Printed Mugs</h3>
                         <p>Make every sip special with our custom mugs. Great for gifts, souvenirs, or promotional items
-                            with your own design.</p>
+                            with your own design. <span class="text-gradient">Click to view all options.</span></p>
                         <div class="price-tag">
                             <span class="price-label">Starting at</span>
                             <span class="price-value">₱ 0.00</span>
@@ -116,14 +110,15 @@
                 </div>
 
                 <!-- Card 4 -->
-                <div class="gallery-item glass" data-category="merch">
+                <div class="gallery-item glass" data-category="merch" style="cursor: pointer;"
+                    onclick="openModal('stickersModal')">
                     <div class="gallery-img-wrapper">
-                        <img src="assets/4.png" alt="Custom Mugs">
+                        <img src="assets/4.png" alt="Custom Stickers">
                     </div>
                     <div class="gallery-content">
                         <h3>Custom Printed Stickers</h3>
                         <p>High-quality, vibrant stickers perfect for branding, packaging, or personal use. Waterproof
-                            and long-lasting.</p>
+                            and long-lasting. <span class="text-gradient">Click to view all options.</span></p>
                         <div class="price-tag">
                             <span class="price-label">Starting at</span>
                             <span class="price-value">₱ 0.00</span>
@@ -131,14 +126,16 @@
                     </div>
                 </div>
 
-                <div class="gallery-item glass" data-category="marketing">
+                <div class="gallery-item glass" data-category="marketing" style="cursor: pointer;"
+                    onclick="openModal('calendarModal')">
                     <div class="gallery-img-wrapper">
                         <img src="assets/3.png" alt="Calendar">
                     </div>
                     <div class="gallery-content">
                         <h3>Personalized Calendar Prints</h3>
                         <p>Stay organized with custom-designed calendars featuring your photos, brand, or preferred
-                            layout—perfect for home or office use.</p>
+                            layout—perfect for home or office use. <span class="text-gradient">Click to view all
+                                options.</span></p>
                         <div class="price-tag">
                             <span class="price-label">Starting at</span>
                             <span class="price-value">₱ 0.00</span>
@@ -146,14 +143,119 @@
                     </div>
                 </div>
 
-                <div class="gallery-item glass" data-category="keychain">
+                <div class="gallery-item glass" data-category="keychain" style="cursor: pointer;"
+                    onclick="openModal('keychainModal')">
                     <div class="gallery-img-wrapper">
                         <img src="assets/5.png" alt="keychains">
                     </div>
                     <div class="gallery-content">
                         <h3>Custom Printed Keychains</h3>
                         <p>Carry your memories or brand everywhere with stylish and durable personalized
-                            keychains—perfect as giveaways or souvenirs.</p>
+                            keychains—perfect as giveaways or souvenirs. <span class="text-gradient">Click to view all
+                                options.</span></p>
+                        <div class="price-tag">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NEW SERVICES -->
+                <!-- Sintra Board -->
+                <div class="gallery-item glass" data-category="sintra" style="cursor: pointer;"
+                    onclick="openModal('sintraModal')">
+                    <div class="gallery-img-wrapper">
+                        <img src="assets/1.png" alt="Sintra Board">
+                    </div>
+                    <div class="gallery-content">
+                        <h3>Sintra Board</h3>
+                        <p>High-quality sintra board printing for menus, standees, and decors. <span
+                                class="text-gradient">Click to view all options.</span></p>
+                        <div class="price-tag">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarpaulin -->
+                <div class="gallery-item glass" data-category="tarpaulin" style="cursor: pointer;"
+                    onclick="openModal('tarpaulinModal')">
+                    <div class="gallery-img-wrapper">
+                        <img src="assets/2.png" alt="Tarpaulin">
+                    </div>
+                    <div class="gallery-content">
+                        <h3>Tarpaulin Printing</h3>
+                        <p>Durable and vibrant tarpaulins for birthdays, businesses, and events. <span
+                                class="text-gradient">Click to view all options.</span></p>
+                        <div class="price-tag">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- School ID -->
+                <div class="gallery-item glass" data-category="schoolid" style="cursor: pointer;"
+                    onclick="openModal('schoolidModal')">
+                    <div class="gallery-img-wrapper">
+                        <img src="assets/4.png" alt="School ID">
+                    </div>
+                    <div class="gallery-content">
+                        <h3>School & Corporate ID</h3>
+                        <p>Professional PVC ID printing for schools and corporate offices. <span
+                                class="text-gradient">Click to view all options.</span></p>
+                        <div class="price-tag">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lanyard -->
+                <div class="gallery-item glass" data-category="lanyard" style="cursor: pointer;"
+                    onclick="openModal('lanyardModal')">
+                    <div class="gallery-img-wrapper">
+                        <img src="assets/3.png" alt="Lanyard">
+                    </div>
+                    <div class="gallery-content">
+                        <h3>Custom Lanyards</h3>
+                        <p>Personalized sublimated lanyards with full-color prints for your IDs. <span
+                                class="text-gradient">Click to view all options.</span></p>
+                        <div class="price-tag">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Signage Design -->
+                <div class="gallery-item glass" data-category="signage" style="cursor: pointer;"
+                    onclick="openModal('signageModal')">
+                    <div class="gallery-img-wrapper">
+                        <img src="assets/5.png" alt="Signage Design">
+                    </div>
+                    <div class="gallery-content">
+                        <h3>Signage Design</h3>
+                        <p>Eye-catching acrylic and lighted signages for storefronts and businesses. <span
+                                class="text-gradient">Click to view all options.</span></p>
+                        <div class="price-tag">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ref Magnet -->
+                <div class="gallery-item glass" data-category="refmagnet" style="cursor: pointer;"
+                    onclick="openModal('refmagnetModal')">
+                    <div class="gallery-img-wrapper">
+                        <img src="assets/4.png" alt="Ref Magnet">
+                    </div>
+                    <div class="gallery-content">
+                        <h3>Ref Magnet</h3>
+                        <p>Custom printed refrigerator magnets. Perfect as souvenirs for baptisms, weddings, and
+                            birthdays. <span class="text-gradient">Click to view all options.</span></p>
                         <div class="price-tag">
                             <span class="price-label">Starting at</span>
                             <span class="price-value">₱ 0.00</span>
@@ -162,6 +264,656 @@
                 </div>
             </div>
         </section>
+
+        <!-- Modals -->
+
+        <!-- Umbrella Modal -->
+        <div id="umbrellaModal" class="modal">
+            <div class="modal-content glass">
+                <span class="close-btn" onclick="closeModal('umbrellaModal')">&times;</span>
+                <h2 style="margin-bottom: 20px;">Umbrella <span class="text-gradient">Options</span></h2>
+
+                <div class="modal-tabs">
+                    <button class="modal-tab-btn active"
+                        onclick="switchTab('u-tab-1', this, 'umbrellaModal')">Foldable</button>
+                    <button class="modal-tab-btn" onclick="switchTab('u-tab-2', this, 'umbrellaModal')">J-Type</button>
+                    <button class="modal-tab-btn" onclick="switchTab('u-tab-3', this, 'umbrellaModal')">Golf</button>
+                </div>
+
+                <div id="u-tab-1" class="modal-tab-content active">
+                    <img src="assets/foldable_umbrella.png" alt="Foldable Umbrella">
+                    <div class="modal-tab-text">
+                        <h3>Foldable Umbrella</h3>
+                        <p>Compact and convenient foldable umbrellas. Available in both <strong>manual and
+                                automatic</strong> options. Perfect for everyday carry and sudden downpours.</p>
+                        <div class="price-tag" style="margin-top:auto; border:none; padding:0;">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="u-tab-2" class="modal-tab-content">
+                    <img src="assets/j_type_umbrella.png" alt="J-Type Umbrella">
+                    <div class="modal-tab-text">
+                        <h3>J-Type Umbrella</h3>
+                        <p>Classic J-handle umbrellas offering elegant style and comfort. Available in both
+                            <strong>manual and automatic</strong> options. Sturdy and reliable for both rain and sun
+                            protection.</p>
+                        <div class="price-tag" style="margin-top:auto; border:none; padding:0;">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="u-tab-3" class="modal-tab-content">
+                    <img src="assets/golf_umbrella.png" alt="Golf Umbrella">
+                    <div class="modal-tab-text">
+                        <h3>Golf Umbrella</h3>
+                        <p>Large canopy golf umbrellas for maximum coverage. Available in both <strong>manual and
+                                automatic</strong> options. Built with durable materials to withstand strong winds.</p>
+                        <div class="price-tag" style="margin-top:auto; border:none; padding:0;">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shirts Modal -->
+        <div id="shirtsModal" class="modal">
+            <div class="modal-content glass">
+                <span class="close-btn" onclick="closeModal('shirtsModal')">&times;</span>
+                <h2 style="margin-bottom: 20px;">Shirts <span class="text-gradient">Options</span></h2>
+
+                <div class="modal-tabs">
+                    <button class="modal-tab-btn active" onclick="switchTab('s-tab-1', this, 'shirtsModal')">Round
+                        Neck</button>
+                    <button class="modal-tab-btn" onclick="switchTab('s-tab-2', this, 'shirtsModal')">V-Neck</button>
+                    <button class="modal-tab-btn" onclick="switchTab('s-tab-3', this, 'shirtsModal')">Polo
+                        Shirt</button>
+                </div>
+
+                <div id="s-tab-1" class="modal-tab-content active">
+                    <img src="assets/2.png" alt="Round Neck">
+                    <div class="modal-tab-text">
+                        <h3>Round Neck Shirt</h3>
+                        <p>High-quality customized round neck shirts. Available in cotton and dry-fit materials. Ideal
+                            for casual wear.</p>
+                        <div class="price-tag" style="margin-top:auto; border:none; padding:0;">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="s-tab-2" class="modal-tab-content">
+                    <img src="assets/2.png" alt="V-Neck">
+                    <div class="modal-tab-text">
+                        <h3>V-Neck Shirt</h3>
+                        <p>Stylish custom V-neck shirts. Comfortable fit with your personalized design or logo. Perfect
+                            for a modern look.</p>
+                        <div class="price-tag" style="margin-top:auto; border:none; padding:0;">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="s-tab-3" class="modal-tab-content">
+                    <img src="assets/2.png" alt="Polo Shirt">
+                    <div class="modal-tab-text">
+                        <h3>Polo Shirt</h3>
+                        <p>Professional custom printed and embroidered polo shirts. Perfect for corporate uniforms and
+                            team branding.</p>
+                        <div class="price-tag" style="margin-top:auto; border:none; padding:0;">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mugs Modal -->
+        <div id="mugsModal" class="modal">
+            <div class="modal-content glass">
+                <span class="close-btn" onclick="closeModal('mugsModal')">&times;</span>
+                <h2 style="margin-bottom: 20px;">Mugs <span class="text-gradient">Options</span></h2>
+
+                <div class="modal-tabs">
+                    <button class="modal-tab-btn active" onclick="switchTab('m-tab-1', this, 'mugsModal')">White
+                        Mug</button>
+                    <button class="modal-tab-btn" onclick="switchTab('m-tab-2', this, 'mugsModal')">Magic Mug</button>
+                    <button class="modal-tab-btn" onclick="switchTab('m-tab-3', this, 'mugsModal')">Inner Color</button>
+                </div>
+
+                <div id="m-tab-1" class="modal-tab-content active">
+                    <img src="assets/4.png" alt="White Mug">
+                    <div class="modal-tab-text">
+                        <h3>Classic White Mug</h3>
+                        <p>Standard 11oz white ceramic mugs with vibrant custom prints. Great for gifts, souvenirs, or
+                            promotional items.</p>
+                        <div class="price-tag" style="margin-top:auto; border:none; padding:0;">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="m-tab-2" class="modal-tab-content">
+                    <img src="assets/4.png" alt="Magic Mug">
+                    <div class="modal-tab-text">
+                        <h3>Magic Mug</h3>
+                        <p>Heat-sensitive mugs that appear black when cold and magically reveal your hidden design when
+                            filled with hot liquid.</p>
+                        <div class="price-tag" style="margin-top:auto; border:none; padding:0;">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="m-tab-3" class="modal-tab-content">
+                    <img src="assets/4.png" alt="Inner Color Mug">
+                    <div class="modal-tab-text">
+                        <h3>Inner Color Mug</h3>
+                        <p>Ceramic mugs with colored interiors and handles to perfectly match your brand colors or
+                            design's aesthetic.</p>
+                        <div class="price-tag" style="margin-top:auto; border:none; padding:0;">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stickers Modal -->
+        <div id="stickersModal" class="modal">
+            <div class="modal-content glass">
+                <span class="close-btn" onclick="closeModal('stickersModal')">&times;</span>
+                <h2 style="margin-bottom: 20px;">Stickers <span class="text-gradient">Options</span></h2>
+
+                <div class="modal-tabs">
+                    <button class="modal-tab-btn active"
+                        onclick="switchTab('st-tab-1', this, 'stickersModal')">Glossy</button>
+                    <button class="modal-tab-btn" onclick="switchTab('st-tab-2', this, 'stickersModal')">Matte</button>
+                    <button class="modal-tab-btn"
+                        onclick="switchTab('st-tab-3', this, 'stickersModal')">Transparent</button>
+                </div>
+
+                <div id="st-tab-1" class="modal-tab-content active">
+                    <img src="assets/4.png" alt="Glossy Stickers">
+                    <div class="modal-tab-text">
+                        <h3>Glossy Stickers</h3>
+                        <p>Vibrant glossy finish stickers perfect for branding and packaging. Waterproof,
+                            fade-resistant, and highly durable.</p>
+                        <div class="price-tag" style="margin-top:auto; border:none; padding:0;">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="st-tab-2" class="modal-tab-content">
+                    <img src="assets/4.png" alt="Matte Stickers">
+                    <div class="modal-tab-text">
+                        <h3>Matte Stickers</h3>
+                        <p>Elegant matte finish stickers for a premium, non-reflective look. Excellent for luxury
+                            product labels.</p>
+                        <div class="price-tag" style="margin-top:auto; border:none; padding:0;">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="st-tab-3" class="modal-tab-content">
+                    <img src="assets/4.png" alt="Transparent Stickers">
+                    <div class="modal-tab-text">
+                        <h3>Transparent Stickers</h3>
+                        <p>Clear vinyl stickers that blend seamlessly onto glass, plastic, or any surface, creating a
+                            "no-label" look.</p>
+                        <div class="price-tag" style="margin-top:auto; border:none; padding:0;">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Calendar Modal -->
+        <div id="calendarModal" class="modal">
+            <div class="modal-content glass">
+                <span class="close-btn" onclick="closeModal('calendarModal')">&times;</span>
+                <h2 style="margin-bottom: 20px;">Calendar <span class="text-gradient">Options</span></h2>
+
+                <div class="modal-tabs">
+                    <button class="modal-tab-btn active" onclick="switchTab('c-tab-1', this, 'calendarModal')">Desk
+                        Calendar</button>
+                    <button class="modal-tab-btn" onclick="switchTab('c-tab-2', this, 'calendarModal')">Wall
+                        Calendar</button>
+                    <button class="modal-tab-btn" onclick="switchTab('c-tab-3', this, 'calendarModal')">Poster
+                        Calendar</button>
+                </div>
+
+                <div id="c-tab-1" class="modal-tab-content active">
+                    <img src="assets/3.png" alt="Desk Calendar">
+                    <div class="modal-tab-text">
+                        <h3>Desk Calendar</h3>
+                        <p>Compact and professional desk calendars. Stay organized while showcasing your brand or photos
+                            right on your workspace year-round.</p>
+                        <div class="price-tag" style="margin-top:auto; border:none; padding:0;">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="c-tab-2" class="modal-tab-content">
+                    <img src="assets/3.png" alt="Wall Calendar">
+                    <div class="modal-tab-text">
+                        <h3>Wall Calendar</h3>
+                        <p>Large wall calendars with custom photos, quotes, or layouts for each month. Perfect for home,
+                            office, or corporate gifts.</p>
+                        <div class="price-tag" style="margin-top:auto; border:none; padding:0;">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="c-tab-3" class="modal-tab-content">
+                    <img src="assets/3.png" alt="Poster Calendar">
+                    <div class="modal-tab-text">
+                        <h3>Poster Calendar</h3>
+                        <p>Single-page large poster calendars featuring your custom design prominently alongside the
+                            entire year's dates.</p>
+                        <div class="price-tag" style="margin-top:auto; border:none; padding:0;">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Keychain Modal -->
+        <div id="keychainModal" class="modal">
+            <div class="modal-content glass">
+                <span class="close-btn" onclick="closeModal('keychainModal')">&times;</span>
+                <h2 style="margin-bottom: 20px;">Keychain <span class="text-gradient">Options</span></h2>
+
+                <div class="modal-tabs">
+                    <button class="modal-tab-btn active"
+                        onclick="switchTab('k-tab-1', this, 'keychainModal')">Acrylic</button>
+                    <button class="modal-tab-btn" onclick="switchTab('k-tab-2', this, 'keychainModal')">Metal</button>
+                    <button class="modal-tab-btn" onclick="switchTab('k-tab-3', this, 'keychainModal')">Rubber
+                        PVC</button>
+                </div>
+
+                <div id="k-tab-1" class="modal-tab-content active">
+                    <img src="assets/5.png" alt="Acrylic Keychain">
+                    <div class="modal-tab-text">
+                        <h3>Acrylic Keychain</h3>
+                        <p>Durable and clear acrylic keychains, custom cut to the exact shape of your logo, character,
+                            or design.</p>
+                        <div class="price-tag" style="margin-top:auto; border:none; padding:0;">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="k-tab-2" class="modal-tab-content">
+                    <img src="assets/5.png" alt="Metal Keychain">
+                    <div class="modal-tab-text">
+                        <h3>Metal Keychain</h3>
+                        <p>Premium engraved or printed metal keychains for a highly professional, luxurious, and
+                            long-lasting souvenir.</p>
+                        <div class="price-tag" style="margin-top:auto; border:none; padding:0;">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="k-tab-3" class="modal-tab-content">
+                    <img src="assets/5.png" alt="PVC Keychain">
+                    <div class="modal-tab-text">
+                        <h3>Rubber PVC Keychain</h3>
+                        <p>Flexible, colorful, and vibrant 3D rubber PVC keychains that make your brand stand out with a
+                            tactile feel.</p>
+                        <div class="price-tag" style="margin-top:auto; border:none; padding:0;">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NEW MODALS -->
+
+        <!-- Sintra Board Modal -->
+        <div id="sintraModal" class="modal">
+            <div class="modal-content glass">
+                <span class="close-btn" onclick="closeModal('sintraModal')">&times;</span>
+                <h2 style="margin-bottom: 20px;">Sintra Board <span class="text-gradient">Options</span></h2>
+
+                <div class="modal-tabs">
+                    <button class="modal-tab-btn active" onclick="switchTab('sb-tab-1', this, 'sintraModal')">Option
+                        1</button>
+                    <button class="modal-tab-btn" onclick="switchTab('sb-tab-2', this, 'sintraModal')">Option 2</button>
+                    <button class="modal-tab-btn" onclick="switchTab('sb-tab-3', this, 'sintraModal')">Option 3</button>
+                </div>
+
+                <div id="sb-tab-1" class="modal-tab-content active">
+                    <img src="assets/1.png" alt="Option 1">
+                    <div class="modal-tab-text">
+                        <h3>Option 1</h3>
+                        <p>Description for Option 1 goes here. You can edit this text.</p>
+                        <div class="price-tag" style="margin-top:auto; border:none; padding:0;">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="sb-tab-2" class="modal-tab-content">
+                    <img src="assets/1.png" alt="Option 2">
+                    <div class="modal-tab-text">
+                        <h3>Option 2</h3>
+                        <p>Description for Option 2 goes here. You can edit this text.</p>
+                        <div class="price-tag" style="margin-top:auto; border:none; padding:0;">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="sb-tab-3" class="modal-tab-content">
+                    <img src="assets/1.png" alt="Option 3">
+                    <div class="modal-tab-text">
+                        <h3>Option 3</h3>
+                        <p>Description for Option 3 goes here. You can edit this text.</p>
+                        <div class="price-tag" style="margin-top:auto; border:none; padding:0;">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarpaulin Modal -->
+        <div id="tarpaulinModal" class="modal">
+            <div class="modal-content glass">
+                <span class="close-btn" onclick="closeModal('tarpaulinModal')">&times;</span>
+                <h2 style="margin-bottom: 20px;">Tarpaulin <span class="text-gradient">Options</span></h2>
+
+                <div class="modal-tabs">
+                    <button class="modal-tab-btn active" onclick="switchTab('tp-tab-1', this, 'tarpaulinModal')">Option
+                        1</button>
+                    <button class="modal-tab-btn" onclick="switchTab('tp-tab-2', this, 'tarpaulinModal')">Option
+                        2</button>
+                    <button class="modal-tab-btn" onclick="switchTab('tp-tab-3', this, 'tarpaulinModal')">Option
+                        3</button>
+                </div>
+
+                <div id="tp-tab-1" class="modal-tab-content active">
+                    <img src="assets/2.png" alt="Option 1">
+                    <div class="modal-tab-text">
+                        <h3>Option 1</h3>
+                        <p>Description for Option 1 goes here. You can edit this text.</p>
+                        <div class="price-tag" style="margin-top:auto; border:none; padding:0;">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tp-tab-2" class="modal-tab-content">
+                    <img src="assets/2.png" alt="Option 2">
+                    <div class="modal-tab-text">
+                        <h3>Option 2</h3>
+                        <p>Description for Option 2 goes here. You can edit this text.</p>
+                        <div class="price-tag" style="margin-top:auto; border:none; padding:0;">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tp-tab-3" class="modal-tab-content">
+                    <img src="assets/2.png" alt="Option 3">
+                    <div class="modal-tab-text">
+                        <h3>Option 3</h3>
+                        <p>Description for Option 3 goes here. You can edit this text.</p>
+                        <div class="price-tag" style="margin-top:auto; border:none; padding:0;">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- School ID Modal -->
+        <div id="schoolidModal" class="modal">
+            <div class="modal-content glass">
+                <span class="close-btn" onclick="closeModal('schoolidModal')">&times;</span>
+                <h2 style="margin-bottom: 20px;">School ID <span class="text-gradient">Options</span></h2>
+
+                <div class="modal-tabs">
+                    <button class="modal-tab-btn active" onclick="switchTab('id-tab-1', this, 'schoolidModal')">Option
+                        1</button>
+                    <button class="modal-tab-btn" onclick="switchTab('id-tab-2', this, 'schoolidModal')">Option
+                        2</button>
+                    <button class="modal-tab-btn" onclick="switchTab('id-tab-3', this, 'schoolidModal')">Option
+                        3</button>
+                </div>
+
+                <div id="id-tab-1" class="modal-tab-content active">
+                    <img src="assets/4.png" alt="Option 1">
+                    <div class="modal-tab-text">
+                        <h3>Option 1</h3>
+                        <p>Description for Option 1 goes here. You can edit this text.</p>
+                        <div class="price-tag" style="margin-top:auto; border:none; padding:0;">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="id-tab-2" class="modal-tab-content">
+                    <img src="assets/4.png" alt="Option 2">
+                    <div class="modal-tab-text">
+                        <h3>Option 2</h3>
+                        <p>Description for Option 2 goes here. You can edit this text.</p>
+                        <div class="price-tag" style="margin-top:auto; border:none; padding:0;">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="id-tab-3" class="modal-tab-content">
+                    <img src="assets/4.png" alt="Option 3">
+                    <div class="modal-tab-text">
+                        <h3>Option 3</h3>
+                        <p>Description for Option 3 goes here. You can edit this text.</p>
+                        <div class="price-tag" style="margin-top:auto; border:none; padding:0;">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lanyard Modal -->
+        <div id="lanyardModal" class="modal">
+            <div class="modal-content glass">
+                <span class="close-btn" onclick="closeModal('lanyardModal')">&times;</span>
+                <h2 style="margin-bottom: 20px;">Lanyard <span class="text-gradient">Options</span></h2>
+
+                <div class="modal-tabs">
+                    <button class="modal-tab-btn active" onclick="switchTab('ly-tab-1', this, 'lanyardModal')">Option
+                        1</button>
+                    <button class="modal-tab-btn" onclick="switchTab('ly-tab-2', this, 'lanyardModal')">Option
+                        2</button>
+                    <button class="modal-tab-btn" onclick="switchTab('ly-tab-3', this, 'lanyardModal')">Option
+                        3</button>
+                </div>
+
+                <div id="ly-tab-1" class="modal-tab-content active">
+                    <img src="assets/3.png" alt="Option 1">
+                    <div class="modal-tab-text">
+                        <h3>Option 1</h3>
+                        <p>Description for Option 1 goes here. You can edit this text.</p>
+                        <div class="price-tag" style="margin-top:auto; border:none; padding:0;">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="ly-tab-2" class="modal-tab-content">
+                    <img src="assets/3.png" alt="Option 2">
+                    <div class="modal-tab-text">
+                        <h3>Option 2</h3>
+                        <p>Description for Option 2 goes here. You can edit this text.</p>
+                        <div class="price-tag" style="margin-top:auto; border:none; padding:0;">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="ly-tab-3" class="modal-tab-content">
+                    <img src="assets/3.png" alt="Option 3">
+                    <div class="modal-tab-text">
+                        <h3>Option 3</h3>
+                        <p>Description for Option 3 goes here. You can edit this text.</p>
+                        <div class="price-tag" style="margin-top:auto; border:none; padding:0;">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Signage Modal -->
+        <div id="signageModal" class="modal">
+            <div class="modal-content glass">
+                <span class="close-btn" onclick="closeModal('signageModal')">&times;</span>
+                <h2 style="margin-bottom: 20px;">Signage <span class="text-gradient">Options</span></h2>
+
+                <div class="modal-tabs">
+                    <button class="modal-tab-btn active" onclick="switchTab('sg-tab-1', this, 'signageModal')">Option
+                        1</button>
+                    <button class="modal-tab-btn" onclick="switchTab('sg-tab-2', this, 'signageModal')">Option
+                        2</button>
+                    <button class="modal-tab-btn" onclick="switchTab('sg-tab-3', this, 'signageModal')">Option
+                        3</button>
+                </div>
+
+                <div id="sg-tab-1" class="modal-tab-content active">
+                    <img src="assets/5.png" alt="Option 1">
+                    <div class="modal-tab-text">
+                        <h3>Option 1</h3>
+                        <p>Description for Option 1 goes here. You can edit this text.</p>
+                        <div class="price-tag" style="margin-top:auto; border:none; padding:0;">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="sg-tab-2" class="modal-tab-content">
+                    <img src="assets/5.png" alt="Option 2">
+                    <div class="modal-tab-text">
+                        <h3>Option 2</h3>
+                        <p>Description for Option 2 goes here. You can edit this text.</p>
+                        <div class="price-tag" style="margin-top:auto; border:none; padding:0;">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="sg-tab-3" class="modal-tab-content">
+                    <img src="assets/5.png" alt="Option 3">
+                    <div class="modal-tab-text">
+                        <h3>Option 3</h3>
+                        <p>Description for Option 3 goes here. You can edit this text.</p>
+                        <div class="price-tag" style="margin-top:auto; border:none; padding:0;">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ref Magnet Modal -->
+        <div id="refmagnetModal" class="modal">
+            <div class="modal-content glass">
+                <span class="close-btn" onclick="closeModal('refmagnetModal')">&times;</span>
+                <h2 style="margin-bottom: 20px;">Ref Magnet <span class="text-gradient">Options</span></h2>
+
+                <div class="modal-tabs">
+                    <button class="modal-tab-btn active" onclick="switchTab('rm-tab-1', this, 'refmagnetModal')">Option
+                        1</button>
+                    <button class="modal-tab-btn" onclick="switchTab('rm-tab-2', this, 'refmagnetModal')">Option
+                        2</button>
+                    <button class="modal-tab-btn" onclick="switchTab('rm-tab-3', this, 'refmagnetModal')">Option
+                        3</button>
+                </div>
+
+                <div id="rm-tab-1" class="modal-tab-content active">
+                    <img src="assets/4.png" alt="Option 1">
+                    <div class="modal-tab-text">
+                        <h3>Option 1</h3>
+                        <p>Description for Option 1 goes here. You can edit this text.</p>
+                        <div class="price-tag" style="margin-top:auto; border:none; padding:0;">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="rm-tab-2" class="modal-tab-content">
+                    <img src="assets/4.png" alt="Option 2">
+                    <div class="modal-tab-text">
+                        <h3>Option 2</h3>
+                        <p>Description for Option 2 goes here. You can edit this text.</p>
+                        <div class="price-tag" style="margin-top:auto; border:none; padding:0;">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="rm-tab-3" class="modal-tab-content">
+                    <img src="assets/4.png" alt="Option 3">
+                    <div class="modal-tab-text">
+                        <h3>Option 3</h3>
+                        <p>Description for Option 3 goes here. You can edit this text.</p>
+                        <div class="price-tag" style="margin-top:auto; border:none; padding:0;">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-value">₱ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer>
